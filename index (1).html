@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senmial Senlong | Customer Onboarding and Implementation</title>
+<meta name="description" content="Senmial (Sen) Senlong, Senior Onboarding Specialist. 120+ SaaS customers onboarded with a 4.98/5 CSAT. Customer success and SaaS implementation portfolio.">
+<meta property="og:title" content="Senmial Senlong | Customer Onboarding and Implementation">
+<meta property="og:description" content="120+ SaaS customers taken from signed contract to confident launch, with a 4.98/5 CSAT.">
+<meta property="og:url" content="https://senmial.com">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231F4E5F'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23F2B84B'>ss</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#122830;        /* deep teal-ink, text */
+    --teal:#1F4E5F;       /* brand teal (carried over from the Notion portfolio) */
+    --lagoon:#3A7D94;     /* secondary teal */
+    --mist:#EAF1F0;       /* page background, cool mineral */
+    --paper:#FAFCFB;      /* raised surfaces */
+    --marigold:#F2B84B;   /* launch accent, used sparingly */
+    --line:#C9D8D6;
+    --muted:#4E6A72;
+    --sans:"Bricolage Grotesque", system-ui, sans-serif;
+    --serif:"Newsreader", Georgia, serif;
+    --wrap:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  .skip{position:absolute;left:-999px}
+  .skip:focus{left:16px;top:16px;background:var(--paper);padding:8px 12px;z-index:10}
+
+  /* Nav */
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;gap:16px}
+  .brand{font-weight:800;font-size:19px;letter-spacing:-.01em;text-decoration:none}
+  .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:16px}
+  .nav ul a{text-decoration:none;color:var(--muted)}
+  .nav ul a:hover{color:var(--ink)}
+  .btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:11px 20px;border-radius:999px}
+  .btn:hover{background:var(--ink)}
+  .btn.ghost{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
+  .btn.ghost:hover{background:var(--teal);color:#fff}
+
+  /* Hero */
+  .hero{padding:72px 28px 64px;display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:end}
+  .hero h1{font-size:clamp(42px,6.2vw,76px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 26px;font-variation-settings:"opsz" 96}
+  .hero p.lede{font-size:21px;color:var(--muted);max-width:34em;margin:0 0 30px}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-quote{background:var(--teal);color:#EAF4F3;border-radius:28px 28px 28px 6px;padding:34px 32px 28px;position:relative}
+  .hero-quote blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.38}
+  .hero-quote cite{display:block;margin-top:18px;font-style:normal;font-size:15px;color:#A9CBD3}
+  .hero-quote .stars{color:var(--marigold);font-size:15px;margin-bottom:12px;letter-spacing:2px}
+
+  /* Results */
+  section{padding:84px 0}
+  h2{font-size:clamp(30px,3.6vw,44px);line-height:1.08;letter-spacing:-.025em;font-weight:700;margin:0 0 14px}
+  .intro{color:var(--muted);max-width:40em;margin:0 0 44px}
+  .results{border-top:2px solid var(--ink)}
+  .figures{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line)}
+  .fig{padding:26px 26px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .fig b{display:block;font-size:52px;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--teal)}
+  .fig span{display:block;margin-top:10px;color:var(--muted);font-size:16px;max-width:17em}
+
+  /* Lifecycle track: the one bold element */
+  .track-sec{background:var(--ink);color:#E6F0EF}
+  .track-sec h2{color:#fff}
+  .track-sec .intro{color:#9FBCC3}
+  .track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px}
+  .track::before{content:"";position:absolute;left:0;right:0;top:15px;height:3px;background:linear-gradient(90deg,var(--lagoon) 0%,var(--lagoon) 72%,var(--marigold) 100%)}
+  .stage{position:relative;padding:0 26px 0 0}
+  .dot{width:33px;height:33px;border-radius:50%;background:var(--ink);border:3px solid var(--lagoon);display:grid;place-items:center;font-weight:700;font-size:14px;color:#fff;position:relative}
+  .stage:last-child .dot{border-color:var(--marigold);background:var(--marigold);color:var(--ink)}
+  .stage h3{font-size:22px;margin:22px 0 8px;letter-spacing:-.01em}
+  .stage p{margin:0 0 18px;color:#B7CED3;font-size:16.5px}
+  .stage q{display:block;font-family:var(--serif);font-style:italic;font-size:17px;color:#fff;border-left:2px solid var(--marigold);padding-left:12px;quotes:"\201C" "\201D"}
+  .span-note{margin-top:46px;display:flex;align-items:center;gap:16px;color:#9FBCC3;font-size:16px}
+  .span-note strong{font-size:40px;font-weight:800;color:var(--marigold);letter-spacing:-.03em;line-height:1}
+
+  /* Case + systems */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .case{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:36px}
+  .case h3{font-size:26px;letter-spacing:-.015em;margin:0 0 12px;line-height:1.15}
+  .case dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:24px 0 0;font-size:16.5px}
+  .case dt{font-weight:700;color:var(--teal)}
+  .case dd{margin:0;color:var(--muted)}
+  .systems{list-style:none;margin:0;padding:0}
+  .systems li{padding:22px 0;border-top:1px solid var(--line)}
+  .systems li:last-child{border-bottom:1px solid var(--line)}
+  .systems h4{margin:0 0 6px;font-size:19px}
+  .systems p{margin:0;color:var(--muted);font-size:16.5px}
+
+  /* Testimonials */
+  .voices{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .featured{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:22px}
+  .fq{background:var(--mist);border-radius:22px;padding:30px 30px 26px}
+  .fq blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.45}
+  .fq cite,.wq cite{display:block;margin-top:14px;font-style:normal;font-weight:600;font-size:15px;color:var(--teal)}
+  .wall{columns:3 260px;column-gap:22px}
+  .wq{break-inside:avoid;margin:0 0 22px;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:#fff}
+  .wq blockquote{margin:0;font-family:var(--serif);font-size:18px;line-height:1.45}
+  .source-note{font-size:15px;color:var(--muted);margin-top:18px;max-width:46em}
+
+  /* Interlude quotes between sections */
+  .interlude{padding:8px 0 76px}
+  .interlude figure{margin:0;max-width:46em;border-left:4px solid var(--marigold);padding:4px 0 4px 28px}
+  .interlude blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.8vw,34px);line-height:1.32;letter-spacing:-.01em}
+  .interlude cite{display:block;margin-top:14px;font-style:normal;font-weight:600;font-size:15px;color:var(--teal)}
+  .interlude.after-dark{padding:76px 0 8px}
+
+  /* Experience */
+  .roles{list-style:none;margin:0;padding:0}
+  .roles li{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;padding:26px 0;border-top:1px solid var(--line)}
+  .roles li:last-child{border-bottom:1px solid var(--line)}
+  .roles h3{margin:0;font-size:20px;line-height:1.25}
+  .roles .org{color:var(--teal);font-weight:600;font-size:16px;margin-top:4px}
+  .roles p{margin:0;color:var(--muted);font-size:16.5px}
+  .edu{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .edu div{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+  .edu b{display:block;font-size:17px}
+  .edu span{color:var(--muted);font-size:15.5px}
+
+  /* Contact */
+  .contact{background:var(--teal);color:#fff;padding:88px 0 40px}
+  .contact h2{color:#fff;font-size:clamp(34px,4.6vw,58px);max-width:15em}
+  .contact p{color:#BFD9DF;max-width:36em}
+  .contact .ctas{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 70px}
+  .contact .btn{background:var(--marigold);color:var(--ink)}
+  .contact .btn:hover{background:#fff}
+  .contact .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+  .contact .btn.ghost:hover{background:#fff;color:var(--teal)}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;font-size:15px;color:#A9CBD3}
+
+  @media (max-width:900px){
+    .hero,.two{grid-template-columns:1fr;gap:40px}
+    .nav ul{display:none}
+    .figures{grid-template-columns:repeat(2,1fr)}
+    .track{grid-template-columns:1fr;gap:34px}
+    .track::before{left:15px;right:auto;top:0;bottom:0;width:3px;height:auto;background:linear-gradient(180deg,var(--lagoon) 0%,var(--lagoon) 72%,var(--marigold) 100%)}
+    .stage{padding:0 0 0 56px}
+    .dot{position:absolute;left:0;top:0}
+    .stage h3{margin-top:2px}
+    .roles li{grid-template-columns:1fr;gap:8px}
+  }
+  @media (max-width:720px){
+    body{font-size:17px}
+    section{padding:64px 0}
+    .featured,.edu{grid-template-columns:1fr}
+    .fig b{font-size:40px}
+    .hero{padding-top:36px}
+    .brand{font-size:17px}
+    .nav .btn{padding:9px 14px;font-size:15px}
+    .figures{grid-template-columns:1fr 1fr}
+    .fig{padding:20px 16px 22px}
+    .fig b{font-size:34px}
+    .wrap{padding:0 20px}
+    .nav{padding:18px 20px}
+    .hero{padding-left:20px;padding-right:20px}
+    .case{padding:26px}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="wrap nav">
+  <a class="brand" href="#top">Senmial Senlong</a>
+  <ul>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#voices">Testimonials</a></li>
+    <li><a href="#experience">Experience</a></li>
+  </ul>
+  <a class="btn" href="mailto:senmial@gmail.com">Get in touch</a>
+</header>
+
+<main id="main">
+  <div class="wrap hero" id="top">
+    <div>
+      <h1>I take software customers from signed contract to confident launch.</h1>
+      <p class="lede">I am Sen, a Senior Onboarding Specialist at WellnessLiving. I have onboarded more than 120 fitness and wellness businesses onto our SaaS platform and hold a company-record 4.98 out of 5 customer satisfaction score.</p>
+      <div class="ctas">
+        <a class="btn" href="mailto:senmial@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://linkedin.com/in/senmial" target="_blank" rel="noopener">View LinkedIn</a>
+      </div>
+    </div>
+    <figure class="hero-quote" style="margin:0">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <blockquote>He made me feel comfortable and even convinced me to come back after thinking of going to another vendor.</blockquote>
+      <cite>Owner, Family and Youth Activity Business</cite>
+    </figure>
+  </div>
+
+  <section id="results">
+    <div class="wrap">
+      <h2>Results</h2>
+      <p class="intro">Numbers from my current onboarding portfolio, where I own each implementation end to end.</p>
+      <div class="results">
+        <div class="figures">
+          <div class="fig"><b>4.98/5</b><span>Customer satisfaction, a company record</span></div>
+          <div class="fig"><b>120+</b><span>SaaS customers onboarded and launched</span></div>
+          <div class="fig"><b>30–40</b><span>Concurrent implementations managed at a time</span></div>
+          <div class="fig"><b>82%</b><span>Implementations completed on time</span></div>
+          <div class="fig"><b>36 days</b><span>Average time from kickoff to launch</span></div>
+          <div class="fig"><b>50,500+</b><span>Client records migrated into the platform</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="interlude"><div class="wrap"><figure>
+    <blockquote>“Sen puts the ‘sen’ in sensational! He guided us through expertly.”</blockquote>
+    <cite>Owner, Niche Fitness Business</cite>
+  </figure></div></div>
+
+  <section class="track-sec" id="approach">
+    <div class="wrap">
+      <h2>How I run an implementation</h2>
+      <p class="intro">Every account follows the same four stages. What changes is how I fit the platform to the way each business already works.</p>
+      <div class="track">
+        <div class="stage">
+          <div class="dot">1</div>
+          <h3>Kickoff</h3>
+          <p>Learn how the business runs, its services, packages and goals, then agree on a launch plan and timeline.</p>
+          <q>Listened to our needs and answered all our questions.</q>
+        </div>
+        <div class="stage">
+          <div class="dot">2</div>
+          <h3>Build and migrate</h3>
+          <p>Configure the account around their workflow and move their client data across cleanly.</p>
+          <q>He adapted to our needs and made the onboarding experience easy.</q>
+        </div>
+        <div class="stage">
+          <div class="dot">3</div>
+          <h3>Training</h3>
+          <p>Hands-on sessions, each followed by a written recap, homework and resources so nothing is lost between calls.</p>
+          <q>The follow-up emails after our calls were helpful too.</q>
+        </div>
+        <div class="stage">
+          <div class="dot">4</div>
+          <h3>Launch and closeout</h3>
+          <p>Go live, support the first days on the platform, and close out with a clear handoff.</p>
+          <q>Confident before launch.</q>
+        </div>
+      </div>
+      <div class="span-note"><strong>36 days</strong><span>average from kickoff to launch across my portfolio</span></div>
+    </div>
+  </section>
+
+
+  <div class="interlude after-dark"><div class="wrap"><figure>
+    <blockquote>“We were a complicated case, and he was patient, responsive, and worked through every challenge with us.”</blockquote>
+    <cite>Owner, Fitness and Nutrition Business</cite>
+  </figure></div></div>
+
+  <section id="work">
+    <div class="wrap two">
+      <div>
+        <h2>A complex launch</h2>
+        <p class="intro" style="margin-bottom:28px">The account I am proudest of, described without client details.</p>
+        <article class="case">
+          <h3>A VIP personal training business, launched on time in four weeks</h3>
+          <p style="margin:0;color:var(--muted)">A high-value account with a large client base and no room for a slipped date. I led the full implementation, including a migration of more than 5,000 records, and delivered the launch on schedule.</p>
+          <dl>
+            <dt>Account</dt><dd>VIP personal training business</dd>
+            <dt>Data</dt><dd>5,000+ records migrated</dd>
+            <dt>Timeline</dt><dd>Four weeks, launched on time</dd>
+          </dl>
+        </article>
+      </div>
+      <div>
+        <h2>Systems I built</h2>
+        <p class="intro" style="margin-bottom:28px">Tools I made to run a large portfolio without dropping details.</p>
+        <ul class="systems">
+          <li><h4>AI post-call workflow</h4><p>Turns each recorded client call into a recap email, updated notes and next tasks, so follow-ups go out the same day.</p></li>
+          <li><h4>Onboarding process wiki</h4><p>A complete written guide to how onboarding runs, from kickoff through closeout.</p></li>
+          <li><h4>Reusable workflow library</h4><p>A Notion database of repeatable processes I use across accounts.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="voices" id="voices">
+    <div class="wrap">
+      <h2>In their words</h2>
+      <p class="intro">Comments business owners left in their post-onboarding surveys.</p>
+      <div class="featured" id="featured"></div>
+      <div class="wall" id="wall"></div>
+      <p class="source-note">Quotes come from WellnessLiving onboarding satisfaction surveys. Names and business details are removed to protect customer privacy.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="intro">Customer onboarding, support and communication across SaaS, fintech and central banking.</p>
+      <ul class="roles">
+        <li>
+          <div><h3>Senior Onboarding Specialist</h3><div class="org">WellnessLiving</div></div>
+          <p>Own a portfolio of 30 to 40 concurrent implementations for fitness and wellness businesses, from kickoff through training, launch and closeout. Co-own high-value and VIP accounts. Promoted from Onboarding Specialist in 2026.</p>
+        </li>
+        <li>
+          <div><h3>Customer Support Specialist</h3><div class="org">Lint Financial</div></div>
+          <p>Supported customers of a financial services product, resolving account and product questions.</p>
+        </li>
+        <li>
+          <div><h3>Digital Customer Experience Specialist</h3><div class="org">Central Bank of Nigeria</div></div>
+          <p>Worked on customer onboarding for the bank's digital currency, helping users get set up and supported.</p>
+        </li>
+        <li>
+          <div><h3>Communications Officer</h3><div class="org">Central Bank of Nigeria</div></div>
+          <p>Produced public and internal communications for the bank.</p>
+        </li>
+      </ul>
+      <div class="edu">
+        <div><b>M.A. Media and Communication</b><span>University of Portsmouth</span></div>
+        <div><b>B.A. Mass Communication</b><span>Bingham University</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="interlude"><div class="wrap"><figure>
+    <blockquote>“No feedback. Very impressed. Give him a raise.”</blockquote>
+    <cite>Business Owner</cite>
+  </figure></div></div>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let’s talk about customer onboarding.</h2>
+    <p>I enjoy comparing notes with people who care about how customers get started. Based in Ottawa, Canada, and working remotely.</p>
+    <div class="ctas">
+      <a class="btn" href="mailto:senmial@gmail.com">senmial@gmail.com</a>
+      <a class="btn ghost" href="https://linkedin.com/in/senmial" target="_blank" rel="noopener">linkedin.com/in/senmial</a>
+    </div>
+    <div class="foot"><span>Senmial Senlong</span><span>Ottawa, ON, Canada</span></div>
+  </div>
+</footer>
+
+<script>
+  const featured = [
+    ["Sen was absolutely amazing, he walked me through everything, and did everything to set us up for success. He is a one of a kind gem, I cannot recommend him enough. He is an absolute joy.", "Owner, Yoga Studio"],
+    ["Sen is a superstar and such a lovely person with a good sense of humour. He's an absolute credit to the company and he will be one of the reasons I recommend it over here in the UK.", "Owner, Pilates Studio (UK)"],
+    ["As a first-time business owner, his support and reassurance gave me confidence when I needed it most. He made every call enjoyable, kept me accountable, and made me feel genuinely supported throughout.", "First-Time Business Owner"],
+    ["Very satisfied with my onboarding! He responded very quickly, listened to our needs and answered all our questions. Highly competent and a pleasure to work with. I recommend him without hesitation.", "Owner, Wellness Studio"],
+    ["He went above and beyond trying to figure out how to fit the platform to my business workflow.", "Owner, Family and Youth Activity Business"],
+    ["Absolutely amazing, very professional, patient as I'm not a computer whiz, smart, and an absolute pleasure to work with. A great representation for the company.", "Owner, Pilates Studio"]
+  ];
+  const wall = [
+    ["So detailed and helps with all my questions. Employee of the year! I am going to miss working with him.", "Owner, Café and Boutique Business"],
+    ["A dream to work with. His cheerful demeanor is very infectious.", "Owner, Massage Studio"],
+    ["Our business is very niche, so finding accommodations that worked for us was awesome!", "Owner, Niche Fitness Business"],
+    ["Our studio is very customizable with a lot of different packages, but he adapted to our needs and made the onboarding experience easy and enjoyable. Confident before launch.", "Owner, Dance Studio"],
+    ["Extremely helpful with accommodating and instructing me on how to incorporate all of our specific business components, and getting us set up for a successful venture.", "Owner, Dance and Fitness Studio"],
+    ["I am not great with technology and he was patient and encouraging throughout the process.", "Owner, Wellness Business"],
+    ["My onboarding specialist was the best. Very patient and thorough. I really appreciate his time and professionalism throughout this process.", "Owner, Athletic Training Business"],
+    ["Knowledgeable and efficient. The follow-up emails after our calls were helpful too, it made it easy to stay on task.", "Owner, Pilates Studio"],
+    ["Very patient and understood my specific needs. A pleasure to work with.", "Owner, Martial Arts Studio"],
+    ["We had a lot of specialized requests and he was flexible with them, he found us the answers if there was something he was unsure about, in a timely manner.", "Community Wellness Organization"],
+    ["We loved the dedication to helping get us set up in a way that aligns best with our brand.", "Owner, Wellness Collective"],
+    ["Overall transferring software is hard, but it was smooth training. He did a wonderful job.", "Owner, Fitness Studio"],
+    ["He was very accommodating with delays on my side, and helped give me great recommendations. He was always there for me.", "Owner, Yoga Studio"],
+    ["Sen was exceptional, thorough, and very helpful.", "Business Owner"],
+    ["A joy to work with! Made everything understandable and easy.", "Owner, Wellness Business"],
+    ["Sen was fantastic.", "Owner, Personal Training Business"]
+  ];
+  const card = (cls, [q, who]) => {
+    const f = document.createElement("figure");
+    f.className = cls; f.style.margin = cls === "fq" ? "0" : "";
+    const b = document.createElement("blockquote"); b.textContent = "“" + q + "”";
+    const c = document.createElement("cite"); c.textContent = who;
+    f.append(b, c); return f;
+  };
+  featured.forEach(x => document.getElementById("featured").append(card("fq", x)));
+  wall.forEach(x => document.getElementById("wall").append(card("wq", x)));
+</script>
+</body>
+</html>
